@@ -1,0 +1,5 @@
+# Fuck you OS X!
+.DS_Store
+
+# Ignore build for a while
+app.js

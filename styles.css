@@ -1,0 +1,24 @@
+/**
+ * McME Styles
+ * 
+ * @author McHorse
+ */
+
+/* Global styling */
+
+*
+{
+    box-sizing: border-box;
+    
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    font-family: 300 14px "Helvetica Neue";
+}
+
+/* Common styles */
+
+/* ... */
