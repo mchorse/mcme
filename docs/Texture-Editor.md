@@ -2,7 +2,8 @@
 
 Texture editor is responsible for providing the user with a simple way to 
 draw a skin for created model. You can always use other external program to 
-draw the skin for your model.
+draw the skin for your model. This texture editor isn't suppose to turn out 
+like Photoshop with tons of plugins and tools.
 
 ## Capabilities (for starter)
 
