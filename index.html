@@ -1,4 +1,9 @@
-<!-- Document -->
+<!-- 
+ McME – Minecraft Model Editor for Blockbuster Actors
+ 
+ @author McHorse
+ @license MIT
+-->
 <!doctype html>
 <html>
 	<head>
@@ -10,9 +15,74 @@
 	
 	<body>
 <!-- Root element of the application -->
-<div class="mcme">
-    <div class="mc-model"></div>
-    <div class="mc-texture"></div>
+<div class="mc-me">
+    <div class="mc-component mc-model"></div>
+    
+    <div class="mc-component mc-texture">
+        <!-- Texture editor tool bar  -->
+        <div class="mc-toolbar mc-toolbar-left clear">
+            <div class="mc-colors">
+                <!-- I don't know what I'm doing here -->
+                &nbsp;&nbsp;
+                <div class="mc-color mc-color-fg"></div>
+                <div class="mc-color mc-color-bg"></div>
+                
+                <!-- Texture editor color picker -->
+                <div class="mc-color-picker">
+                    <div class="mc-color-bar">
+                        <div class="mc-color-row clear">
+                            <div class="mc-color-label left">Hue</div>
+                            <input class="mc-color-value right" type="number" value="360">
+                        </div>
+                        
+                        <canvas class="mc-color-slider" width="200" height="20"></canvas>
+                    </div>
+                    
+                    <div class="mc-color-bar">
+                        <div class="mc-color-row clear">
+                            <div class="mc-color-label left">Saturation</div>
+                            <input class="mc-color-value right" type="number" value="0">
+                        </div>
+                        
+                        <canvas class="mc-color-slider" width="200" height="20"></canvas>
+                    </div>
+                    
+                    <div class="mc-color-bar">
+                        <div class="mc-color-row clear">
+                            <div class="mc-color-label left">Value</div>
+                            <input class="mc-color-value right" type="number" value="100">
+                        </div>
+                        
+                        <canvas class="mc-color-slider" width="200" height="20"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Texture editor tools -->
+            <div class="mc-tool mc-tool-selected" data-tool="pencil">
+                Pencil <i class="fa fa-pencil"></i>
+            </div>
+            
+            <div class="mc-tool" data-tool="eraser">
+                Eraser <i class="fa fa-eraser"></i>
+            </div>
+            
+            <div class="mc-tool" data-tool="picker">
+                Picker <i class="fa fa-map-marker"></i>
+            </div>
+            
+            <div class="mc-tool" data-tool="bucket">
+                Bucket <i class="fa fa-filter"></i>
+            </div>
+            
+            <div class="mc-tool" data-tool="move">
+                Move <i class="fa fa-hand-grab-o"></i>
+            </div>
+        </div>
+        
+        <!-- Drawing canvas -->
+        <canvas id="texture"></canvas>
+    </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
