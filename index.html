@@ -59,27 +59,27 @@
             </div>
             
             <!-- Texture editor tools -->
-            <div class="mc-tool" data-tool="pencil" title="Pencil">
+            <div class="mc-tool" data-tool="pencil" title="Pencil (P)">
                 <i class="fa fa-pencil fa-fw"></i>
             </div>
             
-            <div class="mc-tool" data-tool="eraser" title="Eraser">
+            <div class="mc-tool" data-tool="eraser" title="Eraser (E)">
                 <i class="fa fa-eraser fa-fw"></i>
             </div>
             
-            <div class="mc-tool" data-tool="picker" title="Picker">
+            <div class="mc-tool" data-tool="picker" title="Picker (C)">
                 <i class="fa fa-map-marker fa-fw"></i>
             </div>
             
-            <div class="mc-tool" data-tool="bucket" title="Bucket">
+            <div class="mc-tool" data-tool="bucket" title="Bucket (B)">
                 <i class="fa fa-filter fa-fw"></i>
             </div>
             
-            <div class="mc-tool" data-tool="move" title="Move">
+            <div class="mc-tool" data-tool="move" title="Move (M)">
                 <i class="fa fa-hand-grab-o fa-fw"></i>
             </div>
             
-            <div class="mc-tool" data-tool="zoom" title="Zoom">
+            <div class="mc-tool" data-tool="zoom" title="Zoom (Z)">
                 <i class="fa fa-search-plus fa-fw"></i>
             </div>
         </div>
@@ -93,12 +93,10 @@
 <script src="app.js"></script>
 <script>
     /* Here goes the bootstrap code! */
-    var texture = document.querySelector(".mc-texture"),
-        model   = document.querySelector(".mc-model");
+    var texture = McME.dom.$(".mc-texture"),
+        model   = McME.dom.$(".mc-model");
     
-    var app = new McME.App(texture, model);
-    
-    app.init();
+    (new McME.App(texture, model)).init();
 </script>
 	</body>
 </html>

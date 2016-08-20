@@ -3,25 +3,41 @@
 Texture editor is responsible for providing the user with a simple way to 
 draw a skin for created model. You can always use other external program to 
 draw the skin for your model. This texture editor isn't suppose to turn out 
-like Photoshop with tons of plugins and tools.
+like Photoshop with tons of plugins and tools, but a simple editor with simple 
+functions.
 
-## Capabilities (for starter)
+## Capabilities
+
+For starter, those functions will be available in first version:
 
 * Drawing and erasing pixels
-* Filling (omg recursive filling, oh boy)
+* Filling (omg recursive filling, oh boy, so hard)
 * Moving and zooming canvas
+* Two colors with swapping function
 
 ## Description
 
 Tool bar buttons:
 
+* Two color picker
 * Pencil tool
 * Eraser tool
 * Picker tool
 * Bucket tool
-* Two color picker
+* Move tool
+* Zoom tool
 
-Other part of the screen is filled with texture editor (something like Pixen's main 
-editing screen). Basically the texture editor is really similar to Pixen.
+Other part of the screen is filled with texture canvas. Depends on selected tool 
+different actions would be available.
 
-Texture editor supports multiple color selection, bucket, and stuff.
+On the top right, there would be also two buttons for hiding the texture editor 
+(100% model editor) and settings button. When pressing the settings button 
+there's a special sidebar will appear that would allow the user to specify some 
+of the options of texture editor, like:
+
+* Width and height of the canvas
+* Auto trim the size to fit the drawning
+* Bring canvas to original position and zoom (reset position and zoom)
+* ...
+
+Any ideas what can be in settings?
