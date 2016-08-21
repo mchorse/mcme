@@ -1,7 +1,7 @@
 # @author McHorse
 
 # Constants
-FILE=./app.js
+FILE=./js/app.js
 MAIN=./lib/main.js
 
 # Build JS application into one file
