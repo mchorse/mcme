@@ -24,12 +24,19 @@
             <div class="mc-colors">
                 <!-- I don't know what I'm doing here -->
                 &nbsp;&nbsp;
-                <div class="mc-color mc-color-fg"></div>
-                <div class="mc-color mc-color-bg"></div>
+                <div class="mc-color mc-color-fg" title="To open press V"></div>
+                <div class="mc-color mc-color-bg" title="To open press V"></div>
                 
                 <!-- Texture editor color picker -->
-                <div class="mc-color-picker">
-                    <div class="mc-color-bar">
+                <div class="mc-color-picker hidden">
+                    <!-- Color picker's header -->
+                    <div class="mc-color-header clear">
+                        <div class="mc-color-label left">Color picker</div>
+                        <input class="mc-color-css right" type="text" placeholder="Any CSS color...">
+                    </div>
+                    
+                    <!-- Color picker's HSV bars -->
+                    <div class="mc-color-bar mc-hue-bar">
                         <div class="mc-color-row clear">
                             <div class="mc-color-label left">Hue</div>
                             <input class="mc-color-value right" type="number" value="360">
@@ -38,7 +45,7 @@
                         <canvas class="mc-color-slider" width="200" height="20"></canvas>
                     </div>
                     
-                    <div class="mc-color-bar">
+                    <div class="mc-color-bar mc-saturation-bar">
                         <div class="mc-color-row clear">
                             <div class="mc-color-label left">Saturation</div>
                             <input class="mc-color-value right" type="number" value="0">
@@ -47,9 +54,9 @@
                         <canvas class="mc-color-slider" width="200" height="20"></canvas>
                     </div>
                     
-                    <div class="mc-color-bar">
+                    <div class="mc-color-bar mc-lightness-bar">
                         <div class="mc-color-row clear">
-                            <div class="mc-color-label left">Value</div>
+                            <div class="mc-color-label left">Lightness</div>
                             <input class="mc-color-value right" type="number" value="100">
                         </div>
                         
@@ -90,6 +97,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+<script src="color.min.js"></script>
 <script src="app.js"></script>
 <script>
     /* Here goes the bootstrap code! */
