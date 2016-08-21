@@ -40,6 +40,8 @@ of the options of texture editor, like:
 * Bring canvas to original position and zoom (reset position and zoom)
 * Import skin
 * Clear canvas
+* Draw grid
+* Draw limb guides
 * ...
 
 Any ideas what can be in settings?
