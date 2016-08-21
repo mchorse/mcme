@@ -39,6 +39,7 @@ of the options of texture editor, like:
 * Auto trim the size to fit the drawning
 * Bring canvas to original position and zoom (reset position and zoom)
 * Import skin
+* Clear canvas
 * ...
 
 Any ideas what can be in settings?
