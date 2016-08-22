@@ -99,6 +99,11 @@ body
     right: 0px;
 }
 
+.mc-toolbar-hide
+{
+    z-index: 20;
+}
+
 .mc-tool,
 .mc-colors
 {
@@ -303,7 +308,7 @@ body
     border-bottom: 1px solid #ddd;
     text-align: right;
     
-    padding: 4px;
+    padding: 2px 4px;
     width: 50px;
 }
 
