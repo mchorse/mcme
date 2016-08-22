@@ -66,17 +66,14 @@ body
     left: 50%;
 }
 
-.mc-settings
+.mc-full
 {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
+    left: 0px;
     right: 0px;
     
-    background-color: #fff;
-    z-index: 10;
+    border: 0px;
     
-    width: 300px;
+    width: 100%;
 }
 
 /* Component's tool bar styles */
@@ -86,7 +83,7 @@ body
     position: absolute;
     top: 0px;
     
-    z-index: 9;
+    z-index: 20;
 }
 
 .mc-toolbar-left
@@ -101,13 +98,8 @@ body
 
 .mc-toolbar-bottom
 {
-    top: none;
+    top: auto;
     bottom: 0px;
-}
-
-.mc-toolbar-hide
-{
-    z-index: 20;
 }
 
 .mc-tool,
@@ -123,6 +115,12 @@ body
 .mc-tool-selected
 {
     background: -webkit-linear-gradient(top, #ddd, rgba(255, 255, 255, 0));
+}
+
+.mc-toolbar-bottom .mc-tool:hover,
+.mc-toolbar-bottom .mc-tool-selected
+{
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #ddd);
 }
 
 /* Color picker styles */
@@ -265,6 +263,19 @@ body
 }
 
 /* General settings styles */
+
+.mc-settings
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    
+    background-color: #fff;
+    z-index: 10;
+    
+    width: 300px;
+}
 
 .mc-settings h2,
 .mc-settings-section
