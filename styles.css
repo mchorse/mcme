@@ -66,6 +66,19 @@ body
     left: 50%;
 }
 
+.mc-settings
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    
+    background-color: #fff;
+    z-index: 10;
+    
+    width: 300px;
+}
+
 /* Component's tool bar styles */
 
 .mc-toolbar
@@ -238,6 +251,74 @@ body
     cursor: pointer;
     
     display: block;
+}
+
+/* General settings styles */
+
+.mc-settings h2,
+.mc-settings-section
+{
+    padding: 16px;
+}
+
+.mc-settings h2
+{
+    font: 300 24px "Helvetica Neue";
+}
+
+.mc-settings h3
+{
+    color: #000;
+    font: 300 18px "Helvetica Neue";
+    
+    margin-bottom: 0.75em;
+}
+
+.mc-settings p
+{
+    margin-bottom: 1em;
+}
+
+.mc-settings h2,
+.mc-settings-section
+{
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.mc-settings-section
+{
+    color: #555;
+    font: 400 12px "Helvetica Neue";
+}
+
+.mc-settings-section label:not(:last-child)
+{
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.mc-settings input[type=text]
+{
+    border: 0px;
+    border-bottom: 1px solid #ddd;
+    text-align: right;
+    
+    padding: 4px;
+    width: 50px;
+}
+
+.mc-settings button
+{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #555;
+    cursor: pointer;
+    font: 400 12px "Helvetica Neue";
+    
+    margin-right: 1%;
+    padding: 8px 4px;
+    width: 48%;
 }
 
 /* Texture editor styles */

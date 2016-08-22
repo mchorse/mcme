@@ -36,7 +36,6 @@ there's a special sidebar will appear that would allow the user to specify some
 of the options of texture editor, like:
 
 * Width and height of the canvas
-* Auto trim the size to fit the drawning
 * Bring canvas to original position and zoom (reset position and zoom)
 * Import skin
 * Clear canvas

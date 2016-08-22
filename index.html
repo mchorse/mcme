@@ -91,6 +91,51 @@
             </div>
         </div>
         
+        <!-- Texture editor settings -->
+        <div class="mc-settings">
+            <h2>Texture Settings</h2>
+            
+            <div class="mc-settings-section">
+                <h3>Canvas Size</h3>
+                
+                <label>
+                    Width <input name="width" type="text"> px
+                </label>
+                
+                <label>
+                    Height <input name="height" type="text"> px
+                </label>
+            </div>
+            
+            <div class="mc-settings-section">
+                <h3>Import / Export Skin</h3>
+                
+                <button id="import-skin">Import skin</button>
+                <input class="hidden" name="skin" type="file">
+                
+                <button id="export-skin">Export skin</button>
+            </div>
+            
+            <div class="mc-settings-section">
+                <h3>Canvas Options</h3>
+                
+                <button id="reset-texture">Reset Canvas</button>
+                <button id="reset-texture">Clear Canvas</button>
+            </div>
+            
+            <div class="mc-settings-section">
+                <h3>Grids and Guides</h3>
+                
+                <label>
+                    <input type="checkbox" name="draw_grid"> Show grid
+                </label>
+                
+                <label>
+                    <input type="checkbox" name="draw_guides"> Show limb guides
+                </label>
+            </div>
+        </div>
+        
         <!-- Drawing canvas -->
         <canvas id="texture" width="512" height="256"></canvas>
     </div>
