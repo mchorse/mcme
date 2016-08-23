@@ -19,32 +19,6 @@ body
     font: 300 14px "Helvetica Neue";
 }
 
-/* Common styles */
-
-.hidden
-{
-    display: none;
-}
-
-.clear:after
-{
-    clear: both;
-    content: "";
-    display: block;
-    height: 0px;
-    width: 100%;
-}
-
-.left
-{
-    float: left;
-}
-
-.right
-{
-    float: right;
-}
-
 /* Components */
 
 .mc-component
@@ -343,6 +317,13 @@ body
     width: 48%;
 }
 
+.mc-skin-export
+{
+    display: block;
+    margin: 0px auto;
+    margin-top: 1em;
+}
+
 /* Texture editor styles */
 
 #texture
@@ -356,4 +337,30 @@ body
     
     margin-left: -256px;
     margin-top: -128px;
+}
+
+/* Common styles */
+
+.hidden
+{
+    display: none;
+}
+
+.clear:after
+{
+    clear: both;
+    content: "";
+    display: block;
+    height: 0px;
+    width: 100%;
+}
+
+.left
+{
+    float: left;
+}
+
+.right
+{
+    float: right;
 }
