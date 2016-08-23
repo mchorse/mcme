@@ -319,6 +319,10 @@ body
 
 .mc-skin-export
 {
+    background: url("img/grid.png");
+    background-size: 25%;
+    border: 1px solid #c8c8c8;
+    
     display: block;
     margin: 0px auto;
     margin-top: 1em;
