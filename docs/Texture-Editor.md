@@ -10,10 +10,12 @@ functions.
 
 For starter, those functions will be available in first version:
 
-* Drawing and erasing pixels
-* Filling (omg recursive filling, oh boy, so hard)
-* Moving and zooming canvas
-* Two colors with swapping function
+* [x] Drawing and erasing pixels
+* [ ] Filling (omg recursive filling, oh boy, so hard)
+* [x] Moving and zooming canvas
+* [x] Two colors with swapping function
+* [x] HSL color picker with function to specify a CSS color
+* [ ] Undo/redo mechanism
 
 ## Description
 
