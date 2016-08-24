@@ -88,13 +88,16 @@ body
 .mc-tool:hover,
 .mc-tool-selected
 {
-    background: -webkit-linear-gradient(top, #ddd, rgba(255, 255, 255, 0));
+    background-color: #08f;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    color: #fff;
 }
 
 .mc-toolbar-bottom .mc-tool:hover,
 .mc-toolbar-bottom .mc-tool-selected
 {
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #ddd);
+    border-radius: 4px 4px 0px 0px;
 }
 
 /* Color picker styles */
@@ -114,7 +117,8 @@ body
 .mc-colors .mc-color-fg,
 .mc-colors .mc-color-bg
 {
-    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
     cursor: pointer;
     
     height: 18px;
