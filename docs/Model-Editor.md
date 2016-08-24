@@ -75,6 +75,7 @@ Setting would contain following stuff:
 * Name of the model
 * Export / import JSON models
 * Select limb from `<select>` (useful when shit gets into the way)
+* Render the model (that would really helpful for my youtube thumbnails)
 * ...
 
 Any ideas?
