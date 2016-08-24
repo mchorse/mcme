@@ -241,11 +241,13 @@ body
 .mc-settings
 {
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
+    top: 12px;
+    bottom: 12px;
+    right: 12px;
     
     background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
     overflow-y: auto;
     z-index: 10;
     
@@ -266,7 +268,7 @@ body
 .mc-settings h3
 {
     color: #000;
-    font: 300 18px "Helvetica Neue";
+    font: 300 16px "Helvetica Neue";
     
     margin-bottom: 0.75em;
 }
@@ -280,6 +282,11 @@ body
 .mc-settings-section
 {
     border-bottom: 1px solid #e8e8e8;
+}
+
+.mc-settings-section:last-child
+{
+    border-bottom: 0px;
 }
 
 .mc-settings-section
@@ -296,12 +303,21 @@ body
 
 .mc-settings input[type=text]
 {
-    border: 0px;
-    border-bottom: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
     text-align: right;
     
+    margin: 0px 2px;
     padding: 2px 4px;
     width: 50px;
+}
+
+.mc-settings input[type=text]:focus
+{
+    background-color: #fdfdfd;
+    border-color: #ccc;
 }
 
 .mc-settings button
