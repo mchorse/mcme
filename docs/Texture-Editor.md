@@ -38,11 +38,10 @@ there's a special sidebar will appear that would allow the user to specify some
 of the options of texture editor, like:
 
 * Width and height of the canvas
-* Bring canvas to original position and zoom (reset position and zoom)
-* Import skin
-* Clear canvas
+* Import and export skin buttons
+* Reset and clear canvas buttons
 * Draw grid
 * Draw limb guides
 * ...
 
-Any ideas what can be in settings?
+Any ideas what can also be in the settings?
