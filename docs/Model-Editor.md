@@ -76,7 +76,7 @@ Setting would contain following stuff:
 * Export / import JSON models
 * Select limb from `<select>` (useful when shit gets into the way)
 * Render the model (that would really helpful for my youtube thumbnails)
-* Reset move and zoom
+* Camera settings
 * ...
 
 Any ideas?
