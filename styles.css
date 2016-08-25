@@ -40,6 +40,9 @@ body
     left: 50%;
 }
 
+.mc-model
+{}
+
 .mc-full
 {
     left: 0px;
@@ -258,6 +261,12 @@ body
     width: 300px;
 }
 
+.mc-settings-right
+{
+    left: 12px;
+    right: auto;
+}
+
 .mc-settings h2,
 .mc-settings-section
 {
@@ -363,6 +372,9 @@ body
     margin-left: -256px;
     margin-top: -128px;
 }
+
+#model
+{}
 
 /* Common styles */
 
