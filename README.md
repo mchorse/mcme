@@ -13,5 +13,7 @@ By the way, this editor could be used as skin editor.
 
 <!-- 
     It would be cool if Mojang would integrate my implementation of JSON entity 
-    models *giggles* 
+    models into Minecraft *giggles* 
+
+    Lots of people may start hating me :D
 -->
