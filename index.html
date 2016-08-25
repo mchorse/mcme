@@ -1,6 +1,8 @@
 <!-- 
  McME – Minecraft Model Editor for Blockbuster Actors
  
+ P.S.: This HTML has so much classes it's disturbing, but no conflicts, mate.
+ 
  @author McHorse
  @license MIT
 -->
@@ -16,15 +18,21 @@
 	<body>
 <!-- Root element of the application -->
 <div class="mc-me">
-    <div class="mc-component mc-model"></div>
+    <!-- Model editor component -->
+    <div class="mc-component mc-model">
+        <!-- Model editor tool bar -->
+        <div class="mc-toolbar mc-toolbar-right clear">
+            
+        </div>
+    </div>
     
+    <!-- Texture editor component -->
     <div class="mc-component mc-texture">
         <!-- Texture editor tool bar  -->
         <div class="mc-toolbar mc-toolbar-left clear">
             <div class="mc-colors">
                 <!-- I don't know what I'm doing here -->
                 &nbsp;&nbsp;
-                <!-- Fuck you HTML, for not letting me use "\n" -->
                 <div class="mc-color mc-color-fg" title="Color Picker (V)
 Swap Colors (X)"></div>
                 <div class="mc-color mc-color-bg" title="Color Picker (V)
