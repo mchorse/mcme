@@ -207,7 +207,9 @@ Swap Colors (X)"></div>
     var texture = McME.dom.$(".mc-texture"),
         model   = McME.dom.$(".mc-model");
     
-    (new McME.App(texture, model)).init();
+    var app = new McME.App(texture, model);
+    
+    app.init();
 </script>
 	</body>
 </html>
