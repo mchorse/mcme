@@ -7,18 +7,18 @@
             "size": [1, 2, 1],
             "limbs": {
                 "head": {
-                    "translate": [0, 24, 0]
+                    "translate": [0, 24, 0],
+                    "rotate": [0, 0, 0]
                 },
                 "outer": {
-                    "translate": [0, 24, 0]
+                    "translate": [0, 4, 0],
+                    "scale": [1.1, 1.1, 1.1]
                 },
                 "body": {
                     "translate": [0, 24, 0],
-                    "scale": [1, 1, 1],
-                    "rotate": [0, 0, 0]
                 },
                 "left_arm": {
-                    "translate": [6, 24, 0]
+                    "translate": [6, 24, 0],
                 },
                 "right_arm": {
                     "translate": [-6, 24, 0]
@@ -43,7 +43,7 @@
             "role": "body",
             "size": [8, 12, 4],
             "texture": [16, 16],
-            "anchor": [0.5, 0.1, 0.5]
+            "anchor": [0.5, 0, 0.5]
         },
         "head": {
             "role": "head",
@@ -56,30 +56,32 @@
             "role": "static",
             "size": [8, 8, 8],
             "texture": [32, 0],
-            "anchor": [0.5, 1, 0.5]
+            "anchor": [0.5, 0.5, 0.5]
         },
         "left_arm": {
-            "role": "left_arm",
-            "size": [4, 12, 4],
-            "texture": [0, 16],
-            "anchor": [0.5, 0.1, 0.5]
-        },
-        "right_arm": {
-            "role": "right_arm",
-            "size": [4, 12, 4],
-            "texture": [0, 16],
-            "anchor": [0.5, 0.1, 0.5]
-        },
-        "left_leg": {
-            "role": "left_leg",
-            "size": [4, 12, 4],
-            "texture": [48, 16],
-            "anchor": [0.5, 0, 0.5]
-        },
-        "right_leg": {
-            "role": "right_leg",
+            "role": "arm",
             "size": [4, 12, 4],
             "texture": [40, 16],
+            "anchor": [0.5, 0, 0.5],
+            "mirror": true
+        },
+        "right_arm": {
+            "role": "arm",
+            "size": [4, 12, 4],
+            "texture": [40, 16],
+            "anchor": [0.5, 0, 0.5],
+        },
+        "left_leg": {
+            "role": "leg",
+            "size": [4, 12, 4],
+            "texture": [0, 16],
+            "anchor": [0.5, 0, 0.5],
+            "mirror": true
+        },
+        "right_leg": {
+            "role": "leg",
+            "size": [4, 12, 4],
+            "texture": [0, 16],
             "anchor": [0.5, 0, 0.5]
         }
     }
