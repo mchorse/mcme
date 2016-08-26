@@ -1,45 +1,17 @@
-# JSON Model Scheme
-
-```js
-/**
- * JSON actor model scheme 
- * 
- * Not really sure about riding options, so I remove it for now. I'll think 
- * more about it, and how to implement it actually, and then I'll do something 
- * about it.
- * 
- * @author McHorse
- * @version 1.3
- */
 {
-    /* Scheme version */
     "scheme": "1.3",
-    /* Name of the model (displayed in actor GUI) */
     "name": "Steve",
-    /* Width and height of the skin texture */
     "texture": [64, 32],
-    /* Different variables for poses like standing or sneaking */
     "poses": {
         "standing": {
-            /* Size of the entity (AABB), 1.0 equals one block */
             "size": [1, 2, 1],
             "limbs": {
                 "head": {
                     "translate": [0, 24, 0]
                 },
-                /* "outer" isn't specified, because it doesn't need the transformations */
                 "body": {
-                    /**
-                     * Translate the limb from the origin (from ground center point) 
-                     * 
-                     * Those coordinates are specified in the block units, 
-                     * 16 "pixels" = 1 block, so if your actor is 2 blocks high, 
-                     * he's 32 "pixels" tall.
-                     */
                     "translate": [0, 24, 0],
-                    /* Scale the limb from the anchor, those are default values */
                     "scale": [1, 1, 1],
-                    /* Rotate the limb in degrees from the anchor, those are default values */
                     "rotate": [0, 0, 0]
                 },
                 "left_arm": {
@@ -56,7 +28,6 @@
                 }
             }
         },
-        /* Other poses are going to be merged from the default pose (i.e. standing) */
         "sneak": {
             "size": [1, 1.5, 1]
         },
@@ -64,19 +35,11 @@
             "size": [1, 1, 1],
         }
     },
-    /** 
-     * Array of model's limbs, these objects are containg the definition
-     * of the limbs, the actual transformations are in the poses
-     */
     "limbs": {
         "body": {
-            /* Role of the limb (head, body, (left or right) arm, (left or right) leg, static) */
             "role": "body",
-            /* Size of the limb in pixels */
             "size": [8, 12, 4],
-            /* Texture mapping UV coordinates */
             "texture": [16, 16],
-            /* Anchor of the limb (center of the limb, origin, rotation point) */
             "anchor": [0.5, 0.1, 0.5]
         },
         "head": {
@@ -86,7 +49,6 @@
             "anchor": [0.5, 1, 0.5]
         },
         "outer": {
-            /* All transformations are going to be based relative to parent and anchor */
             "parent": "head",
             "role": "static",
             "size": [8, 8, 8],
@@ -119,4 +81,3 @@
         }
     }
 }
-```

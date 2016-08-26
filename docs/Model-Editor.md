@@ -12,10 +12,10 @@ sleeping) and therefore support for limb transformations.
 
 For starter, those functions will be available in first version:
 
-* [ ] Texture mapping
+* [x] Texture mapping
 * [ ] Poses and transformations
 * [ ] JSON scheme support (see [JSON Scheme](./JSON-Scheme.md) document)
-* [ ] Moving and zooming (this time moving with tool, but zooming with mouse wheel)
+* [x] Moving and zooming (moving with tool, but zooming with mouse wheel)
 * [ ] Add and remove limbs
 * [ ] Select limbs
 * [ ] Edit limb's properties (parent, role, limb size, texture offset)
