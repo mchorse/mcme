@@ -9,6 +9,9 @@
                 "head": {
                     "translate": [0, 24, 0]
                 },
+                "outer": {
+                    "translate": [0, 24, 0]
+                },
                 "body": {
                     "translate": [0, 24, 0],
                     "scale": [1, 1, 1],
