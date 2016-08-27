@@ -3,3 +3,6 @@
 
 # Ignore build for a while
 /js/app.js
+
+# Bower
+/bower_components
