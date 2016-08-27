@@ -118,6 +118,66 @@
             
             <div class="mc-item">
                 <i class="fa fa-male fa-fw mc-item-icon" title="Poses (P)"></i>
+                
+                <!-- Poses popup  -->
+                <div class="mc-box mc-box-right hidden">
+                    <div class="mc-box-header clear">
+                        <div class="mc-color-label left">Poses</div>
+                        
+                        <select name="poses" class="right">
+                            <option>Standing</option>
+                            <option>Sneaking</option>
+                            <option>Sleeping</option>
+                            <option>Flying</option>
+                        </select>
+                    </div>
+                    
+                    <!-- General -->
+                    <div class="mc-box-section">
+                        <div class="mc-box-row clear">
+                            <div class="mc-box-label left">Size</div>
+                            
+                            <div class="mc-dual-input right">
+                                <input name="size_w" placeholder="W" type="text"> by
+                                <input name="size_h" placeholder="H" type="text"> by
+                                <input name="size_d" placeholder="D" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Transformations for current limb -->
+                    <div class="mc-box-section">
+                        <div class="mc-box-row clear">
+                            <div class="mc-box-label left">Translate</div>
+                            
+                            <div class="mc-dual-input right">
+                                <input name="translate_x" placeholder="X" type="text"> by
+                                <input name="translate_y" placeholder="Y" type="text"> by
+                                <input name="translate_z" placeholder="Z" type="text">
+                            </div>
+                        </div>
+                        
+                        <div class="mc-box-row clear">
+                            <div class="mc-box-label left">Scale</div>
+                            
+                            <div class="mc-dual-input right">
+                                <input name="scale_x" placeholder="X" type="text"> by
+                                <input name="scale_y" placeholder="Y" type="text"> by
+                                <input name="scale_z" placeholder="Z" type="text">
+                            </div>
+                        </div>
+                        
+                        <div class="mc-box-row clear">
+                            <div class="mc-box-label left">Rotate</div>
+                            
+                            <div class="mc-dual-input right">
+                                <input name="rotate_x" placeholder="X" type="text"> by
+                                <input name="rotate_y" placeholder="Y" type="text"> by
+                                <input name="rotate_z" placeholder="Z" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
