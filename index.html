@@ -42,7 +42,7 @@
                 <i class="fa fa-list-alt fa-fw mc-item-icon" title="Properties (E)"></i>
                 
                 <!-- Limb properties -->
-                <div class="mc-box mc-box-right hidden">
+                <div class="mc-limbs mc-box mc-box-right hidden">
                     <!-- Header -->
                     <div class="mc-box-header clear">
                         <div class="mc-color-label left">Limb's properties</div>
@@ -117,18 +117,18 @@
             </div>
             
             <div class="mc-item">
-                <i class="fa fa-male fa-fw mc-item-icon" title="Poses (P)"></i>
+                <i class="fa fa-male fa-fw mc-pose-icon mc-item-icon" title="Poses (P)"></i>
                 
-                <!-- Poses popup  -->
-                <div class="mc-box mc-box-right hidden">
+                <!-- Poses popup -->
+                <div class="mc-poses mc-box mc-box-right hidden">
                     <div class="mc-box-header clear">
                         <div class="mc-color-label left">Poses</div>
                         
-                        <select name="poses" class="right">
-                            <option>Standing</option>
-                            <option>Sneaking</option>
-                            <option>Sleeping</option>
-                            <option>Flying</option>
+                        <select class="mc-pose right">
+                            <option value="standing">Standing</option>
+                            <option value="sneaking">Sneaking</option>
+                            <option value="sleeping">Sleeping</option>
+                            <option value="flying">Flying</option>
                         </select>
                     </div>
                     

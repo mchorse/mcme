@@ -31,11 +31,14 @@
                 }
             }
         },
-        "sneak": {
+        "sneaking": {
             "size": [1, 1.5, 1]
         },
-        "elytra": {
-            "size": [1, 1, 1],
+        "sleeping": {
+            "size": [1, 1, 2]
+        },
+        "flying": {
+            "size": [1, 1, 1]
         }
     },
     "limbs": {
