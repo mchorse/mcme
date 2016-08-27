@@ -7,6 +7,23 @@
  * Not really sure about riding options, so I remove it for now. I'll think 
  * more about it, and how to implement it actually, and then I'll do something 
  * about it.
+ *
+ * About "role" key for limbs. I think it's going to be harder to implement 
+ * actual properties of the role. For example, for "arm" role, it's planned that 
+ * it's going to support arm swinging, swiping and holding items, but this role 
+ * will apply limitations on the arm. For example, if user will create an arm with 
+ * additional limb to create sense of elbow and two on the extended part to 
+ * create sense of claws. Guess where holded item would stuck if the part "role" 
+ * would be applied on the first limb? Right, near connection where the elbow is 
+ * created.
+ * 
+ * That's why, probably, instead of role, there's supposed to be additional flags 
+ * that will toggle swinging, swiping, holding items, etc. Like so:
+ *
+ * {
+ *     "head": {"looking": true}, 
+ *     "left_arm": {"swinging": true, "swiping": true, "hold": "left"}
+ * }
  * 
  * @author McHorse
  * @version 1.3
