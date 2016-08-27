@@ -1,7 +1,7 @@
 <!-- 
  McME – Minecraft Model Editor for Blockbuster Actors
  
- P.S.: This HTML has so much classes it's disturbing, but no conflicts, mate.
+ P.S.: This HTML has so much classes, it's disturbing, but no conflicts, mate.
  
  @author McHorse
  @license MIT
@@ -34,16 +34,90 @@
                 <i class="fa fa-arrows fa-fw"></i>
             </div>
             
-            <div class="mc-tool" data-tool="picker" title="Limb Selector (L)">
+            <div class="mc-tool separate-right" data-tool="picker" title="Limb Selector (L)">
                 <i class="fa fa-mouse-pointer fa-fw"></i>
             </div>
             
-            <div class="mc-tool" title="Transformations (T)">
-                <i class="fa fa-repeat fa-fw"></i>
+            <div class="mc-item mc-box-parent">
+                <i class="fa fa-list-alt fa-fw mc-item-icon" title="Properties (E)"></i>
+                
+                <!-- Limb properties -->
+                <div class="mc-box mc-box-right hidden">
+                    <!-- Header -->
+                    <div class="mc-box-header clear">
+                        <div class="mc-color-label left">Limb's properties</div>
+                        <input class="mc-limb-id right" type="text" placeholder="Limb's name...">
+                    </div>
+                    
+                    <!-- Meta properties -->
+                    <div class="mc-box-section">
+                        <div class="mc-box-row clear">
+                            <div class="mc-box-label left">Role</div>
+                            
+                            <select name="role" class="right">
+                                <option>Static</option>
+                                <option>Body</option>
+                                <option>Head</option>
+                                <option>Arm</option>
+                                <option>Leg</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mc-box-row clear">
+                            <div class="mc-box-label left">Parent</div>
+                            
+                            <select name="parent" class="right">
+                                <option>head</option>
+                                <option>body</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Texture settings -->
+                    <div class="mc-box-section">
+                        <div class="mc-box-row clear">
+                            <div class="mc-box-label left">Texture Offset</div>
+                            
+                            <div class="mc-dual-input right">
+                                <input name="texture_x" placeholder="X" type="text"> by
+                                <input name="texture_y" placeholder="Y" type="text">
+                            </div>
+                        </div>
+                        
+                        <div class="mc-box-row clear">
+                            <div class="mc-box-label left">Mirrored</div>
+                            
+                            <input class="right" name="mirror" type="checkbox">
+                        </div>
+                    </div>
+                    
+                    <!-- Size and Anchor -->
+                    <div class="mc-box-section">
+                        <div class="mc-box-row clear">
+                            <div class="mc-box-label left">Size</div>
+                            
+                            <div class="mc-dual-input right">
+                                <input name="size_w" placeholder="W" type="text"> by
+                                <input name="size_h" placeholder="H" type="text"> by
+                                <input name="size_d" placeholder="D" type="text">
+                            </div>
+                        </div>
+                        
+                        <div class="mc-box-row clear">
+                            <div class="mc-box-label left">Anchor</div>
+                            
+                            <div class="mc-dual-input right">
+                                <input name="anchor_x" placeholder="X" type="text"> by
+                                <input name="anchor_y" placeholder="Y" type="text"> by
+                                <input name="anchor_z" placeholder="Z" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="mc-tool" title="Poses (P)">
-                <i class="fa fa-male fa-fw"></i>
+            <div class="mc-item">
+                <i class="fa fa-male fa-fw mc-item-icon" title="Poses (P)"></i>
             </div>
         </div>
         
@@ -72,9 +146,9 @@ Swap Colors (X)"></div>
 Swap Colors (X)"></div>
                 
                 <!-- Texture editor color picker -->
-                <div class="mc-color-picker hidden">
+                <div class="mc-box mc-color-picker hidden">
                     <!-- Color picker's header -->
-                    <div class="mc-color-header clear">
+                    <div class="mc-box-header clear">
                         <div class="mc-color-label left">Color picker</div>
                         <input class="mc-color-css right" type="text" placeholder="Any CSS color...">
                     </div>
@@ -83,7 +157,7 @@ Swap Colors (X)"></div>
                     <div class="mc-color-bar mc-hue-bar">
                         <div class="mc-color-row clear">
                             <div class="mc-color-label left">Hue</div>
-                            <input class="mc-color-value right" type="number" value="360">
+                            <input class="mc-color-value right" type="number">
                         </div>
                         
                         <canvas class="mc-color-slider" width="240" height="26"></canvas>
@@ -92,7 +166,7 @@ Swap Colors (X)"></div>
                     <div class="mc-color-bar mc-saturation-bar">
                         <div class="mc-color-row clear">
                             <div class="mc-color-label left">Saturation</div>
-                            <input class="mc-color-value right" type="number" value="0">
+                            <input class="mc-color-value right" type="number">
                         </div>
                         
                         <canvas class="mc-color-slider" width="240" height="26"></canvas>
@@ -101,7 +175,7 @@ Swap Colors (X)"></div>
                     <div class="mc-color-bar mc-lightness-bar">
                         <div class="mc-color-row clear">
                             <div class="mc-color-label left">Lightness</div>
-                            <input class="mc-color-value right" type="number" value="100">
+                            <input class="mc-color-value right" type="number">
                         </div>
                         
                         <canvas class="mc-color-slider" width="240" height="26"></canvas>
@@ -146,6 +220,7 @@ Swap Colors (X)"></div>
         <div class="mc-settings hidden">
             <h2>Texture Settings</h2>
             
+            <!-- Dimension settings -->
             <div class="mc-settings-section">
                 <h3>Canvas Size</h3>
                 
@@ -158,6 +233,7 @@ Swap Colors (X)"></div>
                 </label>
             </div>
             
+            <!-- Import or export the texture -->
             <div class="mc-settings-section">
                 <h3>Import / Export Skin</h3>
                 
@@ -168,6 +244,7 @@ Swap Colors (X)"></div>
                 <img class="mc-skin-export hidden" title="Right click -> Save As Image">
             </div>
             
+            <!-- Reset the position of canvas and clear canvas actions -->
             <div class="mc-settings-section">
                 <h3>Canvas Options</h3>
                 
@@ -175,6 +252,7 @@ Swap Colors (X)"></div>
                 <button data-action="clear">Clear Canvas</button>
             </div>
             
+            <!-- Grids and guides -->
             <div class="mc-settings-section">
                 <h3>Grids and Guides</h3>
                 
@@ -189,7 +267,7 @@ Swap Colors (X)"></div>
         </div>
         
         <!-- Drawing canvas -->
-        <canvas id="texture" width="512" height="256"></canvas>
+        <canvas id="texture"></canvas>
     </div>
     
     <!-- Hide button for model editor -->
