@@ -15,6 +15,7 @@ For starter, those functions will be available in first version:
 * [x] Moving and zooming canvas
 * [x] Two colors with swapping function
 * [x] HSL color picker with function to specify a CSS color
+* [ ] Color keying for editing in external program
 * [ ] Undo/redo mechanism
 
 ## Description
@@ -40,6 +41,7 @@ of the options of texture editor, like:
 * Width and height of the canvas
 * Import and export skin buttons
 * Reset and clear canvas buttons
+* Draw color codes on texture
 * Draw grid
 * Draw limb guides
 * ...
