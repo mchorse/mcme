@@ -20,6 +20,8 @@ For starter, those functions will be available in first version:
 * [x] Remove limbs
 * [x] Select limbs
 * [x] Edit limb's properties (parent, role, limb size, texture offset)
+* [ ] Finish Settings
+* [ ] Add more tools
 * [ ] Undo/redo mechanism
 
 ## Description
@@ -56,11 +58,10 @@ By the way, wall of text looks really good in documents, *amiright*?
 
 This tool bar contains buttons for choosing specific tool:
 
-* Pose manager
-* Limb editor
 * Limb picker
 * Move tool
-* Hello there tool
+* Rotate limb tool
+* Move model tool
 
 #### Actions Tool Bar (left)
 
@@ -75,9 +76,11 @@ Setting would contain following stuff:
 
 * Name of the model
 * Export / import JSON models
-* Select limb from `<select>` (useful when shit gets into the way)
-* Render the model (that would really helpful for my youtube thumbnails)
+* Explicit limb selector
+* Pose manager
+* Limb's properties
 * Camera settings
+* Render the model (that would really helpful for my youtube thumbnails)
 * ...
 
 Any ideas?

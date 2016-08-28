@@ -166,6 +166,13 @@ body
     left: 50%;
 }
 
+.mc-model
+{
+    /* @todo add a nice background */
+    /* background-image: url("img/background.png"); */
+    background-size: cover;
+}
+
 .mc-full
 {
     left: 0px;
@@ -349,7 +356,7 @@ body
     overflow-y: auto;
     z-index: 10;
     
-    width: 300px;
+    width: 280px;
 }
 
 .mc-settings-right
@@ -413,7 +420,6 @@ body
     outline: none;
     text-align: right;
     
-    margin: 0px 2px;
     padding: 2px 4px;
     width: 50px;
 }

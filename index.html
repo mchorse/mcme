@@ -290,14 +290,24 @@ Swap Colors (X)"></div>
             
             <!-- Dimension settings -->
             <div class="mc-settings-section">
-                <h3>Canvas Size</h3>
+                <h3>Canvas Options</h3>
+                
+                <p>
+                    <input name="width" type="text"> by 
+                    <input name="height" type="text"> pixels
+                </p>
+                
+                <p>
+                    <button data-action="reset">Reset Canvas</button>
+                    <button data-action="clear">Clear Canvas</button>
+                </p>
                 
                 <label>
-                    Width <input name="width" type="text"> px
+                    <input type="checkbox" name="draw_grid"> Show grid
                 </label>
                 
                 <label>
-                    Height <input name="height" type="text"> px
+                    <input type="checkbox" name="draw_guides"> Show limb guides
                 </label>
             </div>
             
@@ -310,27 +320,6 @@ Swap Colors (X)"></div>
                 
                 <button data-action="export">Export skin</button>
                 <img class="mc-skin-export hidden" title="Right click -> Save As Image">
-            </div>
-            
-            <!-- Reset the position of canvas and clear canvas actions -->
-            <div class="mc-settings-section">
-                <h3>Canvas Options</h3>
-                
-                <button data-action="reset">Reset Canvas</button>
-                <button data-action="clear">Clear Canvas</button>
-            </div>
-            
-            <!-- Grids and guides -->
-            <div class="mc-settings-section">
-                <h3>Grids and Guides</h3>
-                
-                <label>
-                    <input type="checkbox" name="draw_grid"> Show grid
-                </label>
-                
-                <label>
-                    <input type="checkbox" name="draw_guides"> Show limb guides
-                </label>
             </div>
         </div>
         
