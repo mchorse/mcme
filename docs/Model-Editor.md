@@ -16,10 +16,10 @@ For starter, those functions will be available in first version:
 * [x] Poses and transformations
 * [x] JSON scheme support (see [JSON Scheme](./JSON-Scheme.md) document)
 * [x] Moving and zooming (moving with tool, but zooming with mouse wheel)
-* [ ] Add limbs
+* [x] Add limbs
 * [x] Remove limbs
 * [x] Select limbs
-* [ ] Edit limb's properties (parent, role, limb size, texture offset)
+* [x] Edit limb's properties (parent, role, limb size, texture offset)
 * [ ] Undo/redo mechanism
 
 ## Description
