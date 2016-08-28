@@ -39,14 +39,14 @@
             </div>
             
             <div class="mc-item mc-box-parent">
-                <i class="fa fa-list-alt fa-fw mc-item-icon" title="Properties (E)"></i>
+                <i class="fa fa-list-alt fa-fw mc-limb-icon mc-item-icon" title="Properties (E)"></i>
                 
                 <!-- Limb properties -->
                 <div class="mc-limbs mc-box mc-box-right hidden">
                     <!-- Header -->
                     <div class="mc-box-header clear">
                         <div class="mc-color-label left">Limb's properties</div>
-                        <input class="mc-limb-id right" type="text" placeholder="Limb's name...">
+                        <input name="id" class="mc-limb-id right" type="text" placeholder="Limb's name...">
                     </div>
                     
                     <!-- Meta properties -->
@@ -55,21 +55,19 @@
                             <div class="mc-box-label left">Role</div>
                             
                             <select name="role" class="right">
-                                <option>Static</option>
-                                <option>Body</option>
-                                <option>Head</option>
-                                <option>Arm</option>
-                                <option>Leg</option>
+                                <option value="">None</option>
+                                <option value="static">Static</option>
+                                <option value="body">Body</option>
+                                <option value="head">Head</option>
+                                <option value="arm">Arm</option>
+                                <option value="leg">Leg</option>
                             </select>
                         </div>
                         
                         <div class="mc-box-row clear">
                             <div class="mc-box-label left">Parent</div>
                             
-                            <select name="parent" class="right">
-                                <option>head</option>
-                                <option>body</option>
-                            </select>
+                            <select name="parent" class="right"></select>
                         </div>
                     </div>
                     
@@ -79,7 +77,7 @@
                             <div class="mc-box-label left">Texture Offset</div>
                             
                             <div class="mc-dual-input right">
-                                <input name="texture_x" placeholder="X" type="text"> by
+                                <input name="texture_x" placeholder="X" type="text"> and
                                 <input name="texture_y" placeholder="Y" type="text">
                             </div>
                         </div>

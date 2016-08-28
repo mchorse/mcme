@@ -2,7 +2,6 @@
     "name": "mcme",
     "homepage": "https://github.com/mchorse/mcme",
     "description": "Model Editor for Blockbuster Actors",
-    "main": "",
     "keywords": [
         "minecraft"
     ],
@@ -10,9 +9,7 @@
     "ignore": [
         "**/.*",
         "node_modules",
-        "bower_components",
-        "test",
-        "tests"
+        "bower_components"
     ],
     "dependencies": {
         "font-awesome": "fontawesome#^4.6.3",
