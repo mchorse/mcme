@@ -60,8 +60,9 @@ This tool bar contains buttons for choosing specific tool:
 
 * [x] Limb picker
 * [x] Move tool
-* [ ] Rotate limb tool
-* [ ] Move model tool
+* [x] Rotate limb tool
+* [x] Translate model tool
+* [x] Scale tool
 
 #### Actions Tool Bar (left)
 

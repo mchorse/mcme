@@ -31,14 +31,27 @@
             </div>
             
             <div class="mc-tool" data-tool="move" title="Move (M)">
+                <i class="fa fa-arrows-alt fa-fw"></i>
+            </div>
+            
+            <div class="mc-tool" data-tool="picker" title="Select Limb (L)">
+                <i class="fa fa-mouse-pointer fa-fw"></i>
+            </div>
+            
+            <div class="mc-tool" data-tool="translate" title="Translate (T)">
                 <i class="fa fa-arrows fa-fw"></i>
             </div>
             
-            <div class="mc-tool" data-tool="picker" title="Limb Selector (L)">
-                <i class="fa fa-mouse-pointer fa-fw"></i>
+            <div class="mc-tool" data-tool="rotate" title="Rotate (R)">
+                <i class="fa fa-rotate-left fa-fw"></i>
+            </div>
+            
+            <div class="mc-tool" data-tool="scale" title="Scale (S)">
+                <i class="fa fa-expand fa-fw"></i>
             </div>
         </div>
         
+        <!-- Settings toggle button -->
         <div class="mc-toolbar mc-toolbar-left">
             <div class="mc-tool mc-toggle-settings" title="Settings (S)">
                 <i class="fa fa-cog fa-fw"></i>
@@ -309,14 +322,12 @@
         <canvas id="texture"></canvas>
     </div>
     
-    <!-- Hide button for model editor -->
+    <!-- Hide button for model and texture editors -->
     <div class="mc-toolbar mc-toolbar-left mc-toolbar-bottom">
         <div class="mc-tool mc-hide-model" title="Hide Model Editor (H)">
             <i class="fa fa-eye-slash fa-fw"></i>
         </div>
     </div>
-    
-    <!-- Hide button for texture editor -->
     <div class="mc-toolbar mc-toolbar-right mc-toolbar-bottom">
         <div class="mc-tool mc-hide-texture" title="Hide Texture Editor (H)">
             <i class="fa fa-eye-slash fa-fw"></i>
