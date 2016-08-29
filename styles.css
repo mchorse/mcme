@@ -384,8 +384,11 @@ body
     margin-bottom: 0.75em;
 }
 
-.mc-settings p
+.mc-settings p:not(:last-child),
+.mc-settings-row,
+.mc-settings label
 {
+    line-height: 1.4em;
     margin-bottom: 1em;
 }
 
@@ -409,7 +412,7 @@ body
 .mc-settings-section label:not(:last-child)
 {
     display: block;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 .mc-settings input[type=text]
@@ -422,6 +425,11 @@ body
     
     padding: 2px 4px;
     width: 50px;
+}
+
+.mc-settings .mc-longer-input[type=text]
+{
+    width: 120px;
 }
 
 .mc-settings input[type=text]:focus

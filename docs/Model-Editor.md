@@ -58,10 +58,10 @@ By the way, wall of text looks really good in documents, *amiright*?
 
 This tool bar contains buttons for choosing specific tool:
 
-* Limb picker
-* Move tool
-* Rotate limb tool
-* Move model tool
+* [x] Limb picker
+* [x] Move tool
+* [ ] Rotate limb tool
+* [ ] Move model tool
 
 #### Actions Tool Bar (left)
 
@@ -69,8 +69,6 @@ Right tool bar is used for actions, instead as a tool set which can be used.
 Setting would contain following stuff:
 
 * Settings
-* Add limb
-* Remove limb
 
 ## Settings
 

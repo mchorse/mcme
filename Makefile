@@ -11,3 +11,7 @@ build:
 # Minify JS application
 minify: build
 	minify -o $(FILE) $(FILE)
+
+# Install dependencies
+install:
+	bower install
