@@ -21,7 +21,7 @@ For starter, those functions will be available in first version:
 * [x] Select limbs
 * [x] Edit limb's properties (parent, role, limb size, texture offset)
 * [ ] Finish Settings
-* [ ] Add more tools
+* [x] Add more tools
 * [ ] Undo/redo mechanism
 
 ## Description
@@ -73,13 +73,13 @@ Setting would contain following stuff:
 
 ## Settings
 
-* Name of the model
-* Export / import JSON models
-* Explicit limb selector
-* Pose manager
-* Limb's properties
-* Camera settings
-* Render the model (that would really helpful for my youtube thumbnails)
+* [x] Name of the model
+* [x] Export / import JSON models
+* [x] Explicit limb selector
+* [x] Pose manager
+* [x] Limb's properties
+* [ ] Camera settings
+* [x] Render the model (that would really helpful for my youtube thumbnails)
 * ...
 
 Any ideas?
