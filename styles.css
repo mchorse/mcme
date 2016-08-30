@@ -445,10 +445,10 @@ body
 
 .mc-button-row button
 {
-    background-color: hsl(208, 100%, 45%);
-    border: 0px solid #ddd;
+    background-color: #eee;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    color: #fff;
+    color: #555;
     cursor: pointer;
     font: bold 12px "Helvetica Neue";
     
@@ -460,7 +460,9 @@ body
 
 .mc-button-row button:hover
 {
-    background-color: hsl(208, 100%, 50%);
+    background-color: #08f;
+    border-color: #08f;
+    color: #fff;
 }
 
 .mc-button-row .mc-100-button
