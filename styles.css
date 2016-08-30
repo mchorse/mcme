@@ -438,7 +438,12 @@ body
     border-color: #ccc;
 }
 
-.mc-settings button
+.mc-button-row
+{
+    font-size: 0px;
+}
+
+.mc-button-row button
 {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -448,8 +453,21 @@ body
     font: 400 12px "Helvetica Neue";
     
     margin-right: 1%;
+    margin-bottom: 0.5em;
     padding: 8px 4px;
-    width: 48%;
+    width: 49%;
+}
+
+.mc-button-row .mc-100-button
+{
+    margin: 0px;
+    width: 100%;
+}
+
+.mc-button-row .mc-right-button
+{
+    margin-right: 0px;
+    margin-left: 1%;
 }
 
 .mc-skin-export

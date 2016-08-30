@@ -75,8 +75,36 @@
                     Select a limb
                     <select class="mc-limbs right" name="limb"></select>
                 </p>
+                
+                <div class="mc-button-row">
+                    <button data-action="import">Import Model</button>
+                    <button class="mc-right-button" data-action="export">Export Model</button>
+                </div>
+                
+                <input class="hidden mc-model-input" type="file">
             </div>
             
+            <!-- Rendering settings -->
+            <div class="mc-settings-section" data-section="render">
+                <h3>Rendering</h3>
+                
+                <label class="clear">
+                    Shadow
+                    <input class="right" name="shadow" type="checkbox">
+                </label>
+                
+                <label class="clear">
+                    Lighting
+                    <input class="right" name="lighting" type="checkbox">
+                </label>
+                
+                <div class="mc-button-row">
+                    <button data-action="render">Render</button>
+                    <button class="mc-right-button" data-action="reset">Reset camera</button>
+                </div>
+            </div>
+            
+            <!-- Limb properties -->
             <div class="mc-settings-section mc-limb">
                 <h3>Limb properties</h3>
                 
@@ -114,9 +142,9 @@
                     </div>
                 </div>
                 
-                <p class="clear">
+                <label class="clear">
                     Mirrored <input class="right" name="mirror" type="checkbox">
-                </p>
+                </label>
                 
                 <!-- Size and Anchor -->
                 <div class="mc-settings-row clear">
@@ -140,6 +168,7 @@
                 </div>
             </div>
             
+            <!-- Pose manager -->
             <div class="mc-settings-section mc-poses">
                 <h3>Poses</h3>
                 
@@ -300,21 +329,25 @@
                     <input type="checkbox" name="draw_guides"> Show limb guides
                 </label>
                 
-                <p>
+                <div class="mc-button-row">
                     <button data-action="reset">Reset Canvas</button>
-                    <button data-action="clear">Clear Canvas</button>
-                </p>
+                    <button class="mc-right-button" data-action="clear">Clear Canvas</button>
+                </div>
             </div>
             
             <!-- Import or export the texture -->
             <div class="mc-settings-section">
                 <h3>Import / Export Skin</h3>
                 
-                <button data-action="import">Import skin</button>
-                <input class="hidden mc-skin-input" type="file">
+                <div class="mc-button-row">
+                    <button data-action="import">Import skin</button>
+                    <button class="mc-right-button" data-action="export">Export skin</button>
+                    
+                    <button class="mc-100-button" data-action="generate">Generate texture mapping</button>
+                </div>
                 
-                <button data-action="export">Export skin</button>
                 <img class="mc-skin-export hidden" title="Right click -> Save As Image" alt="export">
+                <input class="hidden mc-skin-input" type="file">
             </div>
         </div>
         
