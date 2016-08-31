@@ -98,6 +98,8 @@
         },
         "head": {
             "role": "head",
+            /* This limb going to look in direction where player looks */
+            "looking": true,
             "size": [8, 8, 8],
             "texture": [0, 0],
             "anchor": [0.5, 1, 0.5]
@@ -105,31 +107,40 @@
         "outer": {
             /* All transformations are going to be based relative to parent and anchor */
             "parent": "head",
-            "role": "static",
             "size": [8, 8, 8],
             "texture": [32, 0],
             "anchor": [0.5, 1, 0.5]
         },
         "left_arm": {
-            "role": "left_arm",
+            /* When player walks, this limb gonna swing */
+            "swinging": true,
+            /* When player left clicks, this limb gonna do swipe motion */
+            "swiping": true,
+            /* This limb gonna display an item which is selected in hot bar */
+            "holding": "left",
             "size": [4, 12, 4],
             "texture": [0, 16],
-            "anchor": [0.5, 0.1, 0.5]
+            "anchor": [0.5, 0.1, 0.5],
+            /* Mirror texture coordinates */
+            "mirror": true
         },
         "right_arm": {
-            "role": "right_arm",
+            "swinging": true,
+            /* This limb gonna display an item which is in off hand */
+            "holding": "right",
             "size": [4, 12, 4],
             "texture": [0, 16],
             "anchor": [0.5, 0.1, 0.5]
         },
         "left_leg": {
-            "role": "left_leg",
+            "swinging": true,
             "size": [4, 12, 4],
             "texture": [48, 16],
-            "anchor": [0.5, 0, 0.5]
+            "anchor": [0.5, 0, 0.5],
+            "mirror": true
         },
         "right_leg": {
-            "role": "right_leg",
+            "swinging": true,
             "size": [4, 12, 4],
             "texture": [40, 16],
             "anchor": [0.5, 0, 0.5]
