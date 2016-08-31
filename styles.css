@@ -438,6 +438,14 @@ body
     border-color: #ccc;
 }
 
+.mc-settings hr
+{
+    border: 1px solid #eee;
+    border-top: 0px;
+    
+    margin-bottom: 1em;
+}
+
 .mc-button-row
 {
     font-size: 0px;
