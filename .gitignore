@@ -1,7 +1,8 @@
+# OS X crap
 .DS_Store
 
 # Ignore build for a while
-/js/app.js
+/build
 
 # Bower
-/bower_components
+/assets/components

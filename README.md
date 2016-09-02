@@ -9,6 +9,7 @@ models for Blockbuster mod (1.3+). This web app is based on my
 To build this application you need:
 
 * Node JS and NPM
+* PHP
 * `bower`, `minify` and `browserify` NPM packages (they should be installed globally)
 
 Then you navigate to the root of the application, and run:
@@ -19,6 +20,14 @@ make build
 
 File `js/app.js` is going to be built, and then you can open `index.html` file with 
 your favorite browser to run the app. 
+
+For minified JS file, you should run:
+
+```sh
+make minify
+```
+
+Basically see `Makefile` for more information about building process.
 
 Chrome users will get a security error if `index.html` was run from `file://`. 
 Consider using a web server (like `node-static`) or another browser.
