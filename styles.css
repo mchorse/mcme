@@ -183,6 +183,35 @@ body
     width: 100%;
 }
 
+.mc-vertical .mc-component
+{
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    
+    height: 50%;
+    width: auto;
+}
+
+.mc-vertical .mc-texture
+{
+    top: 50%;
+    
+    border-top: 1px solid #eee;
+    border-left: 0px;
+}
+
+.mc-vertical .mc-full
+{
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    
+    border: 0px;
+    height: 100%;
+}
+
 /* Component's tool bar styles */
 
 .mc-toolbar
