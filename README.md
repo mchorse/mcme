@@ -1,4 +1,4 @@
-# McME – Minecraft Model Editor for Blockbuster's Actors
+# Minecraft Model Editor for Blockbuster
 
 McME is a simple web based application which allow creating and editing JSON 
 models for Blockbuster mod (1.3+). This web app is based on my 
@@ -8,8 +8,8 @@ models for Blockbuster mod (1.3+). This web app is based on my
 
 To build this application you need:
 
-* Node JS and NPM
-* PHP
+* Node JS and NPM (for running `bower`, `minify` and `browserify` commands)
+* PHP 5 (for bulding HTML template)
 * `bower`, `minify` and `browserify` NPM packages (they should be installed globally)
 
 Then you navigate to the root of the application, and run:
@@ -27,7 +27,7 @@ For minified JS file, you should run:
 make minify
 ```
 
-Basically see `Makefile` for more information about building process.
+See `Makefile` for more information about building process.
 
 Chrome users will get a security error if `index.html` was run from `file://`. 
 Consider using a web server (like `node-static`) or another browser.

@@ -410,7 +410,7 @@
 
 <div class="mc-credits">
     Hosted on <a href="https://github.com/mchorse/mcme">GitHub</a>. 
-    My <a href="https://www.youtube.com/channel/UCWVDjAcecHHa8UrEWMRGI8w">YouTube channel</a>. 
+    My <a href="https://www.youtube.com/channel/UCWVDjAcecHHa8UrEWMRGI8w">channel</a>. 
     Tested by <a href="https://www.youtube.com/user/Heilerable">NlL5</a>. 
     Updates on <a href="http://twitter.com/McHorsy">Twitter</a>.
     <!-- Sorry if it looks like shit, but I'm not a designer -->

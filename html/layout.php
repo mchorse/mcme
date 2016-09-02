@@ -27,6 +27,7 @@
             <i class="fa fa-arrows-v fa-fw"></i>
         </div>
     </div>
+    
     <div class="mc-toolbar mc-toolbar-right mc-toolbar-bottom">
         <div class="mc-tool mc-show-help" title="Help">
             <i class="fa fa-question fa-fw"></i>

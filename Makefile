@@ -4,6 +4,7 @@
 FILE=./build/js/app.js
 MAIN=./lib/main.js
 HTML=./html/build.php
+BUILD=./build
 
 # Build JS application into one file
 build: templates
@@ -11,11 +12,9 @@ build: templates
 	browserify $(MAIN) -o $(FILE) -s McME
 
 # Build HTML template
-templates:
-	rm -rf build
+templates: clean
 	mkdir build
 	
-	# Create soft links to assets 
 	ln -s ../assets build/assets
 	
 	php $(HTML)
@@ -27,3 +26,6 @@ minify: build
 # Install dependencies
 install:
 	bower install
+
+clean:
+	rm -rf build
