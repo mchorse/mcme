@@ -7,7 +7,9 @@ HTML=./html/build.php
 BUILD=./build
 
 # Build JS application into one file
-build: templates
+build: templates js
+
+js:
 	mkdir build/js
 	browserify $(MAIN) -o $(FILE) -s McME
 
