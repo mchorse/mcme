@@ -1,0 +1,8 @@
+# OS X crap
+.DS_Store
+
+# Ignore build for a while
+/build
+
+# Bower
+/assets/components

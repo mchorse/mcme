@@ -1,0 +1,713 @@
+/**
+ * McME Styles
+ * 
+ * @author McHorse
+ */
+
+/* Global styling */
+
+*
+{
+    box-sizing: border-box;
+    
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    font: 300 14px "Helvetica Neue";
+}
+
+/* Popup box */
+
+.mc-box-parent
+{
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.mc-box
+{
+    position: absolute;
+    top: 3.5em;
+    left: 1em;
+    
+    background-color: white;
+    border: 1px solid #e8e8e8;
+    border-radius: 0px 8px 8px 8px;
+    z-index: 10;
+    
+    width: 260px;
+}
+
+.mc-box-right
+{
+    left: auto;
+    right: 1em;
+    
+    border-radius: 8px 0px 8px 8px;
+}
+
+.mc-box:after,
+.mc-box:before
+{
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    
+    border: 6px solid transparent;
+    border-left: 6px solid #fff;
+    border-bottom: 6px solid #fff;
+    content: "";
+    
+    display: block;
+}
+
+.mc-box:before
+{
+    top: -12px;
+    left: -1px;
+    
+    border-left: 6px solid #e8e8e8;
+    border-bottom: 6px solid #e8e8e8;
+}
+
+.mc-box-right:after,
+.mc-box-right:before
+{
+    left: auto;
+    right: 0px;
+    
+    border-left: 6px solid transparent;
+    border-right: 6px solid #fff;
+}
+
+.mc-box-right:before
+{
+    right: -1px;
+    
+    border-right: 6px solid #e8e8e8;
+}
+
+.mc-box-header
+{
+    border-bottom: 1px solid #e8e8e8;
+    
+    padding: 10px;
+}
+
+.mc-box-section
+{
+    padding: 10px;
+}
+
+.mc-box-section:not(:last-child)
+{
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.mc-box-section .mc-box-row:not(:last-child)
+{
+    margin-bottom: 1em;
+}
+
+.mc-box-row input[type=text]
+{
+    border: 0px;
+    outline: none;
+    text-align: right;
+    
+    width: 70px;
+}
+
+.mc-box-row input[type=checkbox]
+{
+    margin-top: 2px;
+}
+
+.mc-dual-input input[type=text]
+{
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    text-align: right;
+    
+    padding: 2px 4px;
+    width: 40px;
+}
+
+.mc-dual-input input[type=text]:focus
+{
+    background-color: #fdfdfd;
+    border-color: #ccc;
+}
+
+/* Components */
+
+.mc-component
+{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    
+    overflow: hidden;
+    
+    width: 50%;
+}
+
+.mc-texture
+{
+    background-color: #f8f8f8;
+    border-left: 1px solid #eee;
+    
+    left: 50%;
+}
+
+.mc-model
+{
+    /* @todo add a nice background */
+    /* background-image: url("img/background.png"); */
+    background-size: cover;
+}
+
+.mc-full
+{
+    left: 0px;
+    right: 0px;
+    
+    border: 0px;
+    
+    width: 100%;
+}
+
+.mc-vertical .mc-component
+{
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    
+    height: 50%;
+    width: auto;
+}
+
+.mc-vertical .mc-texture
+{
+    top: 50%;
+    
+    border-top: 1px solid #eee;
+    border-left: 0px;
+}
+
+.mc-vertical .mc-full
+{
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    
+    border: 0px;
+    height: 100%;
+}
+
+/* Component's tool bar styles */
+
+.mc-toolbar
+{
+    position: absolute;
+    top: 0px;
+    
+    z-index: 20;
+}
+
+.mc-toolbar-left
+{
+    left: 0px;
+}
+
+.mc-toolbar-right
+{
+    right: 0px;
+}
+
+.mc-toolbar-bottom
+{
+    top: auto;
+    bottom: 0px;
+    
+    z-index:41;
+}
+
+.mc-tool,
+.mc-colors
+{
+    color: #000;
+    cursor: pointer;
+    
+    float: left;
+    padding: 6px;
+}
+
+.mc-item
+{
+    float: left;
+    
+    padding: 6px;
+}
+
+.mc-item-icon
+{
+    cursor: pointer;
+}
+
+.mc-tool:hover,
+.mc-tool-selected
+{
+    background-color: #08f;
+    border-radius: 0px 0px 4px 4px;
+    color: #fff;
+}
+
+.mc-toolbar-bottom .mc-tool:hover,
+.mc-toolbar-bottom .mc-tool-selected
+{
+    border-radius: 4px 4px 0px 0px;
+}
+
+/* Color picker styles */
+
+.mc-colors
+{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    
+    cursor: default;
+    
+    margin: 0px 4px;
+    padding: 8px 12px;
+}
+
+.mc-colors .mc-color-fg,
+.mc-colors .mc-color-bg
+{
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    
+    height: 18px;
+    width: 18px;
+}
+
+.mc-colors .mc-color-fg
+{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    
+    background-color: #fff;
+    z-index: 1;
+}
+
+.mc-colors .mc-color-bg
+{
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    
+    background-color: #000;
+}
+
+/* Color picker's styles */
+
+.mc-color-picker .mc-box-header
+{
+    margin-bottom: 10px;
+}
+
+.mc-color-value,
+.mc-color-css,
+.mc-limb-id
+{
+    border: 0px;
+    outline: none;
+    text-align: right;
+    
+    width: 70px;
+}
+
+.mc-color-css,
+.mc-limb-id
+{
+    width: 100px;
+}
+
+.mc-color-row
+{
+    margin-bottom: 0.5em;
+}
+
+.mc-color-bar
+{
+    padding: 0px 10px;
+}
+
+.mc-color-bar:not(:last-child)
+{
+    margin-bottom: 1em;
+}
+
+.mc-color-bar:last-child
+{
+    padding-bottom: 10px;
+}
+
+.mc-color-slider
+{
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    
+    display: block;
+}
+
+/* General settings styles */
+
+.mc-settings
+{
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    right: 12px;
+    
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    overflow-y: auto;
+    z-index: 10;
+    
+    width: 280px;
+}
+
+.mc-settings-right
+{
+    left: 12px;
+    right: auto;
+}
+
+.mc-settings h2,
+.mc-settings-section
+{
+    padding: 16px;
+}
+
+.mc-settings h2
+{
+    font: 300 24px "Helvetica Neue";
+}
+
+.mc-settings h3
+{
+    color: #000;
+    font: 300 16px "Helvetica Neue";
+    
+    margin-bottom: 0.75em;
+}
+
+.mc-settings p:not(:last-child),
+.mc-settings-row,
+.mc-settings label
+{
+    line-height: 1.4em;
+    margin-bottom: 1em;
+}
+
+.mc-settings h2,
+.mc-settings-section
+{
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.mc-settings-section:last-child
+{
+    border-bottom: 0px;
+}
+
+.mc-settings-section
+{
+    color: #555;
+    font: 400 12px "Helvetica Neue";
+}
+
+.mc-settings-section label:not(:last-child)
+{
+    display: block;
+    margin-bottom: 1em;
+}
+
+.mc-settings input[type=text]
+{
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    text-align: right;
+    
+    padding: 2px 4px;
+    width: 50px;
+}
+
+.mc-settings .mc-longer-input[type=text]
+{
+    width: 120px;
+}
+
+.mc-settings input[type=text]:focus
+{
+    background-color: #fdfdfd;
+    border-color: #ccc;
+}
+
+.mc-settings hr
+{
+    border: 1px solid #eee;
+    border-top: 0px;
+    
+    margin-bottom: 1em;
+}
+
+.mc-button-row
+{
+    font-size: 0px;
+}
+
+.mc-button-row button
+{
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #555;
+    cursor: pointer;
+    font: bold 12px "Helvetica Neue";
+    
+    margin-right: 1%;
+    margin-bottom: 0.5em;
+    padding: 8px 4px;
+    width: 49%;
+}
+
+.mc-button-row button:hover
+{
+    background-color: #08f;
+    border-color: #08f;
+    color: #fff;
+}
+
+.mc-button-row .mc-100-button
+{
+    margin: 0px;
+    width: 100%;
+}
+
+.mc-button-row .mc-right-button
+{
+    margin-right: 0px;
+    margin-left: 1%;
+}
+
+.mc-skin-export
+{
+    background: url("img/grid.png");
+    background-size: 25%;
+    border: 1px solid #c8c8c8;
+    
+    display: block;
+    margin: 0px auto;
+    margin-top: 1em;
+}
+
+/* Texture editor styles */
+
+#texture
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    background: url("img/grid.png");
+    border: 1px solid #c8c8c8;
+    
+    margin-left: -256px;
+    margin-top: -128px;
+}
+
+/* Help styles */
+
+.mc-help-wrapper
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 40;
+}
+
+.mc-help
+{
+    position: absolute;
+    top: 48px;
+    bottom: 48px;
+    left: 48px;
+    right: 48px;
+    
+    background-color: #f8f8f8;
+    /*box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);*/
+    border-radius: 8px;
+    color: #222;
+    font: 400 14px "Helvetica Neue";
+    
+    overflow-y: auto;
+}
+
+.mc-help-section
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 50%;
+    
+    overflow-y: auto;
+}
+
+.mc-help-section-right
+{
+    left: auto;
+    right: 0px;
+    
+    border-left: 1px solid #e8e8e8;
+}
+
+.mc-help h1
+{
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    font: 300 32px "Helvetica Neue";
+    
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+}
+
+.mc-help h2
+{
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    font: 300 24px "Helvetica Neue";
+    
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding: 0.5em 0.5em;
+}
+
+.mc-help h3
+{
+    font: 300 20px "Helvetica Neue";
+    
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding: 0px 0.5em;
+}
+
+.mc-help p,
+.mc-help ul
+{
+    line-height: 1.4em;
+    
+    margin-bottom: 1em;
+    padding: 0px 1em;
+}
+
+.mc-help ul
+{
+    list-style: none;
+}
+
+.mc-help ul li
+{
+    margin-bottom: 0.5em;
+}
+
+.mc-help kbd
+{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    font-family: Menlo, Monaco, monospace;
+    font-size: 12px;
+    
+    padding: 1px 4px;
+}
+
+.mc-credits
+{
+    position: absolute;
+    bottom: 8px;
+    left: 20%;
+    right: 20%;
+    
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+}
+
+.mc-credits a
+{
+    background-color: #fff;
+    border-radius: 4px;
+    color: #08f;
+    text-decoration: none;
+    
+    padding: 2px 4px;
+}
+
+.mc-credits a:hover
+{
+    background-color: #eee;
+}
+
+/* Common styles */
+
+.hidden
+{
+    display: none;
+}
+
+.clear:after
+{
+    clear: both;
+    content: "";
+    display: block;
+    height: 0px;
+    width: 100%;
+}
+
+.left
+{
+    float: left;
+}
+
+.right
+{
+    float: right;
+}
+
+.separate-right
+{
+    margin-right: 1.5em;
+}
