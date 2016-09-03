@@ -1,8 +1,25 @@
 # OS X crap
 .DS_Store
 
-# Ignore build for a while
-/build
+# Bower stuff
+/assets/components/*
 
-# Bower
-/assets/components
+# Three.JS
+!/assets/components/three.js
+/assets/components/three.js/*
+!/assets/components/three.js/build
+/assets/components/three.js/build/*
+!/assets/components/three.js/build/three.min.js
+
+# Color.js
+!/assets/components/color.js
+/assets/components/color.js/*
+!/assets/components/color.js/color.min.js
+
+# Font Awesome
+!/assets/components/font-awesome
+/assets/components/font-awesome/*
+!/assets/components/font-awesome/css
+!/assets/components/font-awesome/fonts
+/assets/components/font-awesome/css/*
+!/assets/components/font-awesome/css/font-awesome.min.css
