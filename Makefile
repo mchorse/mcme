@@ -17,7 +17,6 @@ js:
 templates: clean
 	mkdir -p build
 	
-	cp .gitignore $(BUILD)/.gitignore
 	cp -r assets $(BUILD)/assets
 	
 	php $(HTML)
