@@ -10,14 +10,15 @@ BUILD=./build
 build: templates js
 
 js:
-	mkdir build/js
+	mkdir -p build/js
 	browserify $(MAIN) -o $(FILE) -s McME
 
 # Build HTML template
 templates: clean
-	mkdir build
+	mkdir -p build
 	
-	ln -s ../assets build/assets
+	cp .gitignore $(BUILD)/.gitignore
+	cp -r assets $(BUILD)/assets
 	
 	php $(HTML)
 
@@ -30,4 +31,4 @@ install:
 	bower install
 
 clean:
-	rm -rf build
+	rm -rf build/*
