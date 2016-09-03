@@ -409,9 +409,9 @@
 </div>
 
 <div class="mc-credits">
-    Hosted on <a href="https://github.com/mchorse/mcme">GitHub</a>. 
-    My <a href="https://www.youtube.com/channel/UCWVDjAcecHHa8UrEWMRGI8w">channel</a>. 
-    Tested by <a href="https://www.youtube.com/user/Heilerable">NlL5</a>. 
-    Updates on <a href="http://twitter.com/McHorsy">Twitter</a>.
+    Hosted on <a href="https://github.com/mchorse/mcme" target="_blank">GitHub</a>. 
+    My <a href="https://www.youtube.com/channel/UCWVDjAcecHHa8UrEWMRGI8w" target="_blank">channel</a>. 
+    Tested by <a href="https://www.youtube.com/user/Heilerable" target="_blank">NlL5</a>. 
+    Updates on <a href="http://twitter.com/McHorsy" target="_blank">Twitter</a>.
     <!-- Sorry if it looks like shit, but I'm not a designer -->
 </div>
