@@ -118,6 +118,8 @@
             "swiping": true,
             /* This limb gonna display an item which is selected in hot bar */
             "holding": "left",
+            /* This limb is gonna move a little bit when idling */
+            "idle": true,
             "size": [4, 12, 4],
             "texture": [0, 16],
             "anchor": [0.5, 0.1, 0.5],

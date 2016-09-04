@@ -131,6 +131,10 @@
             Swiping <input class="right" name="swiping" type="checkbox">
         </label>
         
+        <label class="clear">
+            Idle <input class="right" name="idle" type="checkbox">
+        </label>
+        
         <hr>
         
         <!-- Visual properties -->
