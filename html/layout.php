@@ -8,17 +8,17 @@
 <!-- Root element of the application -->
 <div class="mc-me">
     <!-- Model editor component -->
-    <div class="mc-component mc-model">
+    <div class="mc-component mc-model no-select">
 <?php require('partials/model.php') ?> 
     </div>
     
     <!-- Texture editor component -->
-    <div class="mc-component mc-texture">
+    <div class="mc-component mc-texture no-select">
 <?php require('partials/texture.php') ?> 
     </div>
     
     <!-- Hide button for model and texture editors -->
-    <div class="mc-toolbar mc-toolbar-left mc-toolbar-bottom">
+    <div class="mc-toolbar mc-toolbar-left mc-toolbar-bottom no-select">
         <div class="mc-tool mc-hide-model" title="Hide Model Editor (H)">
             <i class="fa fa-eye-slash fa-fw"></i>
         </div>
@@ -28,7 +28,7 @@
         </div>
     </div>
     
-    <div class="mc-toolbar mc-toolbar-right mc-toolbar-bottom">
+    <div class="mc-toolbar mc-toolbar-right mc-toolbar-bottom no-select">
         <div class="mc-tool mc-show-help" title="Help">
             <i class="fa fa-question fa-fw"></i>
         </div>
