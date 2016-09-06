@@ -3,8 +3,12 @@
     <div class="mc-colors">
         <!-- I don't know what I'm doing here -->
         &nbsp;&nbsp;
-        <div class="mc-color mc-color-fg" title="Color Picker (V) Swap Colors (X)"></div>
-        <div class="mc-color mc-color-bg" title="Color Picker (V) Swap Colors (X)"></div>
+        <div class="mc-color mc-color-fg" title="Color Picker (V) Swap Colors (X)">
+            <div class="mc-color-overlay"></div>
+        </div>
+        <div class="mc-color mc-color-bg" title="Color Picker (V) Swap Colors (X)">
+            <div class="mc-color-overlay"></div>
+        </div>
         
         <!-- Texture editor color picker -->
         <div class="mc-box mc-color-picker hidden">

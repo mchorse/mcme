@@ -293,12 +293,26 @@ body
 .mc-colors .mc-color-fg,
 .mc-colors .mc-color-bg
 {
+    position: relative;
+    
+    background-image: url("img/grid.png");
+    background-size: 50%;
     border-radius: 4px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
     cursor: pointer;
     
     height: 18px;
+    overflow: hidden;
     width: 18px;
+}
+
+.mc-colors .mc-color-overlay
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
 }
 
 .mc-colors .mc-color-fg
