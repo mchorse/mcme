@@ -24,7 +24,7 @@
         <i class="fa fa-rotate-left fa-fw"></i>
     </div>
     
-    <div class="mc-tool" data-tool="scale" title="Scale (S)">
+    <div class="mc-tool" data-tool="scale" title="Scale (C)">
         <i class="fa fa-expand fa-fw"></i>
     </div>
 </div>
