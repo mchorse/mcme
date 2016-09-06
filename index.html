@@ -19,7 +19,7 @@
 <!-- Root element of the application -->
 <div class="mc-me">
     <!-- Model editor component -->
-    <div class="mc-component mc-model">
+    <div class="mc-component mc-model no-select">
 <!-- Model editor tool bar -->
 <div class="mc-toolbar mc-toolbar-right clear">
     <div class="mc-tool mc-add-limb" title="Add Limb">
@@ -46,7 +46,7 @@
         <i class="fa fa-rotate-left fa-fw"></i>
     </div>
     
-    <div class="mc-tool" data-tool="scale" title="Scale (S)">
+    <div class="mc-tool" data-tool="scale" title="Scale (C)">
         <i class="fa fa-expand fa-fw"></i>
     </div>
 </div>
@@ -261,14 +261,18 @@
     </div>
     
     <!-- Texture editor component -->
-    <div class="mc-component mc-texture">
+    <div class="mc-component mc-texture no-select">
 <!-- Texture editor tool bar  -->
 <div class="mc-toolbar mc-toolbar-left clear">
     <div class="mc-colors">
         <!-- I don't know what I'm doing here -->
         &nbsp;&nbsp;
-        <div class="mc-color mc-color-fg" title="Color Picker (V) Swap Colors (X)"></div>
-        <div class="mc-color mc-color-bg" title="Color Picker (V) Swap Colors (X)"></div>
+        <div class="mc-color mc-color-fg" title="Color Picker (V) Swap Colors (X)">
+            <div class="mc-color-overlay"></div>
+        </div>
+        <div class="mc-color mc-color-bg" title="Color Picker (V) Swap Colors (X)">
+            <div class="mc-color-overlay"></div>
+        </div>
         
         <!-- Texture editor color picker -->
         <div class="mc-box mc-color-picker hidden">
@@ -390,7 +394,7 @@
     </div>
     
     <!-- Hide button for model and texture editors -->
-    <div class="mc-toolbar mc-toolbar-left mc-toolbar-bottom">
+    <div class="mc-toolbar mc-toolbar-left mc-toolbar-bottom no-select">
         <div class="mc-tool mc-hide-model" title="Hide Model Editor (H)">
             <i class="fa fa-eye-slash fa-fw"></i>
         </div>
@@ -400,7 +404,7 @@
         </div>
     </div>
     
-    <div class="mc-toolbar mc-toolbar-right mc-toolbar-bottom">
+    <div class="mc-toolbar mc-toolbar-right mc-toolbar-bottom no-select">
         <div class="mc-tool mc-show-help" title="Help">
             <i class="fa fa-question fa-fw"></i>
         </div>
