@@ -84,7 +84,7 @@ this.inputs.forEach(function(i){s.on(i,"change",function(){t.change(this)})}),s.
 if(e=e.limb,0==i.indexOf("size")){var r=["w","h","d"],a=r.indexOf(i.substr(o+1))
 s.size[a]=parseFloat(t.value),this.editor.model.applyPose(s),this.editor.model.updateAABB(s)}else{var r=["x","y","z"],a=r.indexOf(i.substr(o+1))
 s.limbs[e.id][n][a]=parseFloat(t.value),this.editor.model.applyLimbPose(e,s)}this.editor.render()},poseChange:function(){var t=this.current()
-t.applyPose(this.editor.app.actor),this.editor.app.actor.updateAABB(t),this.fill(),this.editor.render()},fill:function(){var t=this.editor.limb
+this.editor.model.applyPose(t),this.editor.model.updateAABB(t),this.fill(),this.editor.render()},fill:function(){var t=this.editor.limb
 if(!t)return this.inputs.forEach(function(t){0!=t.name.indexOf("size")&&(t.disabled=!0,t.value="")}),void this.fillSize()
 var i=this.model.poses.getPoseForLimb(t.limb.id,this.pose.value),e=this.current(),s={size_w:e.size[0],size_h:e.size[1],size_d:e.size[2],translate_x:i.translate[0],translate_y:i.translate[1],translate_z:i.translate[2],scale_x:i.scale[0],scale_y:i.scale[1],scale_z:i.scale[2],rotate_x:i.rotate[0],rotate_y:i.rotate[1],rotate_z:i.rotate[2]}
 this.inputs.forEach(function(t){t.disabled=!1,t.value=s[t.name]})},fillSize:function(){var t=this.current(),i={size_w:t.size[0],size_h:t.size[1],size_d:t.size[2]}
