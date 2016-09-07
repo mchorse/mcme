@@ -31,3 +31,9 @@ install:
 
 clean:
 	rm -rf build/*
+
+# Deploy app to GitHub Pages
+deploy: minify
+	git -C $(BUILD) add .
+	git -C $(BUILD) commit -m "$(M)"
+	git -C $(BUILD) push origin gh-pages
