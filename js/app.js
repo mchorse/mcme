@@ -94,7 +94,7 @@ n.prototype={init:function(){var t=this
 this.inputs.forEach(function(e){s.on(e,"change",function(){t.change(this)})}),this.updateLimbs(),this.fill()},change:function(t){var e=this.editor.limb,i=t.name,s="checkbox"!=t.type?t.value:t.checked
 if(e){e=e.limb
 var o=i.split("_")
-key=o.shift(),action=key+"Change",this[action]?this[action](e,s,i):e[key]=s}},idChange:function(t,e,i){return this.editor.app.actor.hasLimb(e)||""==e?alert('Limb with name "'+e+'" already exist!'):(this.editor.settings.poses.current().rename(t.id,e),t.id=e,this.updateLimbs(),void this.editor.settings.updateLimbs())},parentChange:function(t,e){if(e!=t.id){t.parent=e,t.mesh.parent.remove(t.mesh),(""==e?this.editor.model.group:this.editor.model.get(e)).add(t.mesh)
+key=o.shift(),action=key+"Change",this[action]?this[action](e,s,i):e[key]=s}},idChange:function(t,e,i){return this.editor.app.actor.hasLimb(e)||""==e?alert('Limb with name "'+e+'" already exist!'):(this.editor.app.actor.poses.rename(t.id,e),t.id=e,this.updateLimbs(),this.editor.settings.updateLimbs(),void(this.parent.value=t.parent))},parentChange:function(t,e){if(e!=t.id){t.parent=e,t.mesh.parent.remove(t.mesh),(""==e?this.editor.model.group:this.editor.model.get(e)).add(t.mesh)
 var i=this.editor.settings.poses.current()
 this.editor.model.applyLimbPose(t,i)}},textureChange:function(t,e,i){var s=["x","y"].indexOf(i.substr(i.indexOf("_")+1))
 t.texture[s]=parseInt(e),this.editor.update(),this.editor.app.texture.render()},mirrorChange:function(t,e){t.mirror=e,this.editor.update()},sizeChange:function(t,e,i){var s=["w","h","d"].indexOf(i.substr(i.indexOf("_")+1)),e=parseInt(e)
