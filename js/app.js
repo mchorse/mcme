@@ -74,8 +74,9 @@ i.remove(e),e.geometry.dispose(),e=this.buildLimb(t),e.material=s,children.forEa
 s.cube(i.w,i.h,t.geometry,a,h,o,n,r,e.mirror)},build:function(){var t=this
 this.limbs.length&&(this.limbs.forEach(function(t){t.parent.remove(t),t.geometry.dispose()}),this.limbs.length=0),this.model.limbs.forEach(function(e){var i=t.buildLimb(e)
 t.mapUV(i),t.limbs.push(i),t.group.add(i)}),this.form()},form:function(){for(var t={},e=0,i=this.limbs.length;e<i;e++){var s=this.limbs[e].limb
-if(s.parent&&t[s.parent]){var o=t[s.parent]
-s.mesh.parent.remove(s.mesh),o.mesh.add(s.mesh)}t[s.id]=s}},updateTexture:function(){var t=this
+t[s.id]=this.limbs[e].limb}for(var o in t){var s=t[o]
+if(s.parent&&t[s.parent]){var n=t[s.parent]
+s.mesh.parent.remove(s.mesh),n.mesh.add(s.mesh)}}},updateTexture:function(){var t=this
 o.width=this.data.w,o.height=this.data.h,this.data.render(o.getContext("2d"),this.data.w,this.data.h),this.limbs.forEach(function(e){t.mapUV(e)}),this.material.map.needsUpdate=!0,this.material.needsUpdate=!0},toggleMaterial:function(t){var e=t?this.lightMaterial:this.flatMaterial,i=t?this.lightSelectedMaterial:this.flatSelectedMaterial
 this.limbs.forEach(function(t){t.material=e}),this.material=e,this.selectedMaterial=i},updateAABB:function(t){var e=t.size[0],i=t.size[1],s=t.size[2]
 this.aabb.geometry.dispose(),this.aabb.geometry=new THREE.BoxGeometry(2*e,2*i,2*s)}}},{"./3d/limb":5,"./3d/poses":8,"./3d/uv":10}],15:[function(t,e,i){var s=t("../dom"),o=e.exports=function(t,e){this.editor=t,this.model=t.app.actor,this.element=e,this.inputs=s.$$("input",e),this.pose=s.$(".mc-pose",e)}
