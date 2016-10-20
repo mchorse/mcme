@@ -67,7 +67,7 @@ return e!=-1&&(this.limbs.forEach(function(e){e.limb.parent==t.limb.id&&i.remove
 s.position.set(n[0]/8,h/8,n[2]/8),s.scale.set(r[0],r[1],r[2]),s.rotation.set(a[0]/180*o,a[1]/180*o,a[2]/180*o),this.updateAABB(e)},buildLimb:function(t){var e=new THREE.BoxGeometry(t.size[0]/8,t.size[1]/8,t.size[2]/8),i=new THREE.Mesh(e,this.material)
 i.castShadow=!0,i.receiveShadow=!0,i.limb=t,t.mesh=i
 var s=t.size[0]/8,o=t.size[1]/8,n=t.size[2]/8,r=t.anchor[0],a=t.anchor[1],h=t.anchor[2]
-return i.geometry.translate(-s/2,-o/2,-n/2),i.geometry.translate(r*s,a*o,h*n),i},regenerateLimb:function(t){var e=t.mesh,i=e.parent,s=e.material
+return i.geometry.translate(-s/2,-o/2,-n/2),i.geometry.translate(r*s,a*o,h*n),i.rotation.order="ZYX",i},regenerateLimb:function(t){var e=t.mesh,i=e.parent,s=e.material
 children=[],index=this.limbs.indexOf(e)
 for(var o=0,n=e.children.length;o<n;o++)children.push(e.children[o])
 i.remove(e),e.geometry.dispose(),e=this.buildLimb(t),e.material=s,children.forEach(function(t){e.add(t)}),i.add(e),this.mapUV(e),this.limbs[index]=e},mapUV:function(t){var e=t.limb,i=this.data,o=e.size[0],n=e.size[1],r=e.size[2],a=e.texture[0],h=i.h-(e.texture[1]+n+r)
@@ -134,15 +134,17 @@ if(null!=i){i=i.limb,e-=this.y,e/=20
 var s=this.poses.current(),o=s.forLimb(i.id),n=o.scale[0],r=o.scale[1],a=o.scale[2]
 o.scale[0]=+Math.clamp(this.sx+e,0,1/0).toFixed(1),o.scale[1]=+Math.clamp(this.sy+e,0,1/0).toFixed(1),o.scale[2]=+Math.clamp(this.sz+e,0,1/0).toFixed(1),o.scale[0]<=0&&(o.scale[0]=n),o.scale[1]<=0&&(o.scale[1]=r),o.scale[2]<=0&&(o.scale[2]=a),this.model.applyLimbPose(i,s),this.editor.render(),this.editor.settings.poses.fill()}},onMouseDown:function(t,e){var i=this.editor.limb
 if(null!=i){var s=this.poses.current().forLimb(i.limb.id)
-this.y=e,this.sx=s.scale[0],this.sy=s.scale[1],this.sz=s.scale[2]}}}},{}],23:[function(t,e,i){var s=e.exports=function(t){this.editor=t,this.model=t.model,this.poses=t.settings.poses}
+this.y=e,this.sx=s.scale[0],this.sy=s.scale[1],this.sz=s.scale[2]}}}},{}],23:[function(t,e,i){var s=e.exports=function(t){this.editor=t,this.model=t.model,this.poses=t.settings.poses,this.vector=new THREE.Vector3(0,0,0)}
 s.prototype={onMouseMove:function(t,e){var i=this.editor.limb
 if(null!=i){i=i.limb
 var s=this.editor.app.key,o=s&&s.shiftKey
-t-=this.x,e-=this.y,t/=30,e/=30
+t=(t-this.x)/24,e=(e-this.y)/24,this.vector.set(t,o?0:-e,o?e:0),this.vector.applyQuaternion(this.quat)
 var n=this.poses.current(),r=n.forLimb(i.id)
-o?(r.translate[0]=Math.floor(10*(this.tx+t))/10,r.translate[2]=Math.floor(10*(this.tz-e))/10):(r.translate[0]=Math.floor(10*(this.tx+t))/10,r.translate[1]=Math.floor(10*(this.ty-e))/10),this.model.applyLimbPose(i,n),this.editor.render(),this.editor.settings.poses.fill()}},onMouseDown:function(t,e){var i=this.editor.limb
+r.translate[0]=Math.floor(10*(this.tx+this.vector.x))/10,r.translate[1]=Math.floor(10*(this.ty+this.vector.y))/10,r.translate[2]=Math.floor(10*(this.tz+this.vector.z))/10,this.model.applyLimbPose(i,n),this.editor.render(),this.editor.settings.poses.fill()}},onMouseDown:function(t,e){var i=this.editor.limb
 if(null!=i){var s=this.poses.current().forLimb(i.limb.id)
-this.x=t,this.y=e,this.tx=s.translate[0],this.ty=s.translate[1],this.tz=s.translate[2]}}}},{}],24:[function(t,e,i){e.exports={populateLimbs:function(t,e){e.limbs.forEach(function(e){var i=document.createElement("option")
+this.x=t,this.y=e
+var o=this.model.group.rotation.clone()
+o.y*=-1,this.quat=new THREE.Quaternion,this.quat.setFromEuler(o),this.tx=s.translate[0],this.ty=s.translate[1],this.tz=s.translate[2]}}}},{}],24:[function(t,e,i){e.exports={populateLimbs:function(t,e){e.limbs.forEach(function(e){var i=document.createElement("option")
 i.value=i.text=e.id,t.appendChild(i)})}}},{}],25:[function(t,e,i){var s=t("./dom"),o=e.exports=function(t,e){this.editor=t,this.element=e,this.settings={},this.inputs=s.$$("[name]",e),this.buttons=s.$$("[data-action]",e)}
 o.prototype={init:function(){var t=this
 this.inputs.forEach(function(e){s.on(e,"change",function(){t.settings[e.name]=t.get(e),t.notifyChanges(this)}),t.set(e,t.settings[e.name]),t.settings[e.name]=t.get(e)}),this.buttons.forEach(function(e){var i=e.dataset.action+"Action"
