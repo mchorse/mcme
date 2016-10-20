@@ -105,7 +105,7 @@ var i=this.editor.settings.poses.current()
 this.editor.model.applyLimbPose(t,i)}},textureChange:function(t,e,i){var s=["x","y"].indexOf(i.substr(i.indexOf("_")+1))
 t.texture[s]=parseInt(e),this.editor.update(),this.editor.app.texture.render()},mirrorChange:function(t,e){t.mirror=e,this.editor.update()},sizeChange:function(t,e,i){var s=["w","h","d"].indexOf(i.substr(i.indexOf("_")+1)),e=parseInt(e)
 e>0&&(t.size[s]=e,this.regenerate(t),this.editor.render(),this.editor.app.texture.render())},anchorChange:function(t,e,i){var s=["x","y","z"].indexOf(i.substr(i.indexOf("_")+1))
-t.anchor[s]=Math.clamp(parseFloat(e),0,1),this.regenerate(t)},regenerate:function(t){var e=this.editor.settings.poses.current()
+t.anchor[s]=Math.clamp(parseFloat(e),0,1),this.regenerate(t),this.editor.render()},regenerate:function(t){var e=this.editor.settings.poses.current()
 this.editor.model.regenerateLimb(t),this.editor.limb=t.mesh,this.editor.model.applyLimbPose(t,e)},fill:function(){var t=this.editor.limb
 if(!t)return this.empty()
 t=t.limb
