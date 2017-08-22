@@ -13,7 +13,7 @@
     ],
     "dependencies": {
         "font-awesome": "fontawesome#^4.6.3",
-        "three.js": "threejs#3510fdd",
+        "three.js": "threejs#e55ba32",
         "color.js": "eligrey/color.js#5d875ec"
     }
 }
