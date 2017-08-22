@@ -9,6 +9,9 @@ BUILD=./build
 # Build JS application into one file
 build: templates js
 
+serve: build
+	php -S localhost:8000 -t ./build/
+
 js:
 	mkdir -p build/js
 	browserify $(MAIN) -o $(FILE) -s McME
