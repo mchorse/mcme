@@ -1120,6 +1120,8 @@ CombinedCamera.prototype =
 module.exports={
     "scheme": "1.3",
     "name": "Steve",
+    "default": "blockbuster:textures/entity/actor.png",
+    "scale": [0.9375, 0.9375, 0.9375],
     "poses": {
         "standing": {
             "size": [ 0.6, 1.8, 0.6 ],
@@ -1135,16 +1137,47 @@ module.exports={
                     "translate": [ 0, 24, 0 ]
                 },
                 "left_arm": {
-                    "translate": [ 6, 24, 0 ]
+                    "translate": [ 6, 22, 0 ]
                 },
                 "right_arm": {
-                    "translate": [ -6, 24, 0 ]
+                    "translate": [ -6, 22, 0 ]
                 },
                 "left_leg": {
                     "translate": [ 2, 12, 0 ]
                 },
                 "right_leg": {
                     "translate": [ -2, 12, 0 ]
+                }
+            }
+        },
+        "riding": {
+            "size": [ 0.6, 1.8, 0.6 ],
+            "limbs": {
+                "head": {
+                    "translate": [ 0, 24, 0 ]
+                },
+                "outer": {
+                    "translate": [ 0, 4, 0 ],
+                    "scale": [ 1.1, 1.1, 1.1 ]
+                },
+                "body": {
+                    "translate": [ 0, 24, 0 ]
+                },
+                "left_arm": {
+                    "translate": [ 6, 22, 0 ],
+                    "rotate": [ -36, 0, 0 ]
+                },
+                "right_arm": {
+                    "translate": [ -6, 22, 0 ],
+                    "rotate": [ -36, 0, 0 ]
+                },
+                "left_leg": {
+                    "translate": [ 2, 12, 0 ],
+                    "rotate": [ -81, 18, -4.5 ]
+                },
+                "right_leg": {
+                    "translate": [ -2, 12, 0 ],
+                    "rotate": [ -81, -18, 4.5 ]
                 }
             }
         },
@@ -1163,11 +1196,11 @@ module.exports={
                     "scale": [ 1.1, 1.1, 1.1 ]
                 },
                 "left_arm": {
-                    "translate": [ 6, 20.8, 0 ],
+                    "translate": [ 6, 18.8, 0 ],
                     "rotate": [ 22.9, 0, 0 ]
                 },
                 "right_arm": {
-                    "translate": [ -6, 20.8, 0 ],
+                    "translate": [ -6, 18.8, 0 ],
                     "rotate": [ 22.9, 0, 0 ]
                 },
                 "left_leg": {
@@ -1192,10 +1225,10 @@ module.exports={
                     "translate": [ 0, 24, 0 ]
                 },
                 "left_arm": {
-                    "translate": [ 6, 24, 0 ]
+                    "translate": [ 6, 22, 0 ]
                 },
                 "right_arm": {
-                    "translate": [ -6, 24, 0 ]
+                    "translate": [ -6, 22, 0 ]
                 },
                 "left_leg": {
                     "translate": [ 2, 12, 0 ]
@@ -1219,10 +1252,10 @@ module.exports={
                     "translate": [ 0, 24, 0 ]
                 },
                 "left_arm": {
-                    "translate": [ 6, 24, 0 ]
+                    "translate": [ 6, 22, 0 ]
                 },
                 "right_arm": {
-                    "translate": [ -6, 24, 0 ]
+                    "translate": [ -6, 22, 0 ]
                 },
                 "left_leg": {
                     "translate": [ 2, 12, 0 ]
@@ -1254,18 +1287,20 @@ module.exports={
         "left_arm": {
             "size": [ 4, 12, 4 ],
             "texture": [ 40, 16 ],
-            "anchor": [ 0.5, 0, 0.5 ],
+            "anchor": [ 0.5, 0.1666, 0.5 ],
             "mirror": true,
             "holding": "left",
-            "swinging": true
+            "swinging": true,
+            "idle": true
         },
         "right_arm": {
             "size": [ 4, 12, 4 ],
             "texture": [ 40, 16 ],
-            "anchor": [ 0.5, 0, 0.5 ],
+            "anchor": [ 0.5, 0.1666, 0.5 ],
             "holding": "right",
             "swiping": true,
-            "swinging": true
+            "swinging": true,
+            "idle": true
         },
         "left_leg": {
             "size": [ 4, 12, 4 ],
